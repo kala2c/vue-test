@@ -74,6 +74,7 @@ vue-test
       "serve": "npx ../node_modules/.bin/vue-cli-service serve ./main.js",
     "build": "npx ../node_modules/.bin/vue-cli-service build --dest ../dist/demo ./main.js"
     }
+    ```
   注意修改``build``的输出路径
   最后``package.json``的大致内容
     ```
@@ -90,4 +91,4 @@ vue-test
       "license": "ISC"
     }
     ```
-- 现在在可以在每个子目录下单独调试和构建了
+- 现在可以在每个子目录下单独调试和构建了
