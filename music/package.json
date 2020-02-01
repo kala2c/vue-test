@@ -1,0 +1,12 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "serve": "npx ../node_modules/.bin/vue-cli-service serve ./main.js",
+    "build": "npx ../node_modules/.bin/vue-cli-service build --dest ../dist/music ./main.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

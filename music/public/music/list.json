@@ -1,0 +1,232 @@
+[
+  {
+      "id": 1,
+      "name": "告白气球",
+      "singer": "周杰伦",
+      "url": "http://qn.clw-music.c2wei.cn/3.mp3",
+      "status": 0,
+      "groups_id": 1,
+      "createdAt": null,
+      "updatedAt": null
+  },
+  {
+      "id": 2,
+      "name": "睡公主",
+      "singer": "邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/22.mp3",
+      "status": 0,
+      "groups_id": 1,
+      "createdAt": null,
+      "updatedAt": null
+  },
+  {
+      "id": 3,
+      "name": "北京北京",
+      "singer": "邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/01.mp3",
+      "status": 0,
+      "groups_id": 1,
+      "createdAt": null,
+      "updatedAt": null
+  },
+  {
+      "id": 4,
+      "name": "爱过那张脸",
+      "singer": "李代沫",
+      "url": "http://qn.clw-music.c2wei.cn/4.mp3",
+      "status": 0,
+      "groups_id": 1,
+      "createdAt": null,
+      "updatedAt": null
+  },
+  {
+      "id": 11,
+      "name": "你不是真正的快乐",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 你不是真正的快乐.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:31:29.000Z",
+      "updatedAt": "2020-01-31T12:31:29.000Z"
+  },
+  {
+      "id": 12,
+      "name": "你把我灌醉",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 你把我灌醉.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:41:34.000Z",
+      "updatedAt": "2020-01-31T12:41:34.000Z"
+  },
+  {
+      "id": 13,
+      "name": "光年之外",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 光年之外.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:42:16.000Z",
+      "updatedAt": "2020-01-31T12:42:16.000Z"
+  },
+  {
+      "id": 14,
+      "name": "北京北京",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 北京北京.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:42:30.000Z",
+      "updatedAt": "2020-01-31T12:42:30.000Z"
+  },
+  {
+      "id": 15,
+      "name": "单行的轨道",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 单行的轨道.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:42:42.000Z",
+      "updatedAt": "2020-01-31T12:42:42.000Z"
+  },
+  {
+      "id": 16,
+      "name": "后会无期",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 后会无期.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:42:52.000Z",
+      "updatedAt": "2020-01-31T12:42:52.000Z"
+  },
+  {
+      "id": 17,
+      "name": "喜欢你",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 喜欢你.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:43:13.000Z",
+      "updatedAt": "2020-01-31T12:43:13.000Z"
+  },
+  {
+      "id": 18,
+      "name": "多远都要在一起",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 多远都要在一起.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:43:39.000Z",
+      "updatedAt": "2020-01-31T12:43:39.000Z"
+  },
+  {
+      "id": 19,
+      "name": "七里香",
+      "singer": "周杰伦",
+      "url": "http://qn.clw-music.c2wei.cn/周杰伦 - 七里香.mp3",
+      "status": 0,
+      "groups_id": 3,
+      "createdAt": "2020-01-31T12:44:06.000Z",
+      "updatedAt": "2020-01-31T12:44:06.000Z"
+  },
+  {
+      "id": 20,
+      "name": "听妈妈的话",
+      "singer": "周杰伦",
+      "url": "http://qn.clw-music.c2wei.cn/周杰伦 - 听妈妈的话.mp3",
+      "status": 0,
+      "groups_id": 3,
+      "createdAt": "2020-01-31T12:44:29.000Z",
+      "updatedAt": "2020-01-31T12:44:29.000Z"
+  },
+  {
+      "id": 21,
+      "name": "告白气球",
+      "singer": "周杰伦",
+      "url": "http://qn.clw-music.c2wei.cn/周杰伦 - 告白气球.mp3",
+      "status": 0,
+      "groups_id": 3,
+      "createdAt": "2020-01-31T12:44:46.000Z",
+      "updatedAt": "2020-01-31T12:44:46.000Z"
+  },
+  {
+      "id": 22,
+      "name": "晴天",
+      "singer": "周杰伦",
+      "url": "http://qn.clw-music.c2wei.cn/周杰伦 - 晴天.mp3",
+      "status": 0,
+      "groups_id": 3,
+      "createdAt": "2020-01-31T12:45:01.000Z",
+      "updatedAt": "2020-01-31T12:45:01.000Z"
+  },
+  {
+      "id": 23,
+      "name": "稻香",
+      "singer": "周杰伦",
+      "url": "http://qn.clw-music.c2wei.cn/周杰伦 - 稻香.mp3",
+      "status": 0,
+      "groups_id": 3,
+      "createdAt": "2020-01-31T12:45:26.000Z",
+      "updatedAt": "2020-01-31T12:45:26.000Z"
+  },
+  {
+      "id": 24,
+      "name": "如果没有你",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 如果没有你.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:54:18.000Z",
+      "updatedAt": "2020-01-31T12:54:18.000Z"
+  },
+  {
+      "id": 25,
+      "name": "存在",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 存在.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:54:41.000Z",
+      "updatedAt": "2020-01-31T12:54:41.000Z"
+  },
+  {
+      "id": 26,
+      "name": "我要我们在一起",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 我要我们在一起.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:55:00.000Z",
+      "updatedAt": "2020-01-31T12:55:00.000Z"
+  },
+  {
+      "id": 27,
+      "name": "泡沫",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 泡沫.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:55:15.000Z",
+      "updatedAt": "2020-01-31T12:55:15.000Z"
+  },
+  {
+      "id": 28,
+      "name": "睡公主",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 睡公主.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:55:37.000Z",
+      "updatedAt": "2020-01-31T12:55:37.000Z"
+  },
+  {
+      "id": 29,
+      "name": "龙卷风",
+      "singer": "G.E.M. 邓紫棋",
+      "url": "http://qn.clw-music.c2wei.cn/G.E.M. 邓紫棋 - 龙卷风.mp3",
+      "status": 0,
+      "groups_id": 4,
+      "createdAt": "2020-01-31T12:55:56.000Z",
+      "updatedAt": "2020-01-31T12:55:56.000Z"
+  }
+]

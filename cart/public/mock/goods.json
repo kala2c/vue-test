@@ -1,0 +1,29 @@
+{
+    "msg" : "OK",
+    "data" : [
+        {
+            "id": 1,
+            "name": "小飞象",
+            "price": "40",
+            "number": 2,
+            "picture": "http://qn.c2wei.cn/Fvt7qJ0TCJ9_yxI27q0pwO8hLQUB",
+            "checked": true
+        },
+        {
+            "id": 2,
+            "name": "大熊猫",
+            "price": "50",
+            "number": 1,
+            "picture": "http://qn.c2wei.cn/FgFgccP7CvIg2Zt359gXCyKcG_KL",
+            "checked": false
+        },
+        {
+            "id": 3,
+            "name": "水杯",
+            "price": "20",
+            "number": 3,
+            "picture": "http://qn.c2wei.cn/FjhfXFBlnswjZnPxFCv08IDJXyfc",
+            "checked": true
+        }
+    ]
+}

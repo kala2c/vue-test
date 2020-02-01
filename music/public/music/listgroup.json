@@ -1,0 +1,72 @@
+[
+  {
+      "id": 1,
+      "name": "默认列表",
+      "count": 4,
+      "logo": "/singer/default.jpg",
+      "desc": "测试数据",
+      "status": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updatedAt": "2020-01-29T00:00:00.000Z"
+  },
+  {
+      "id": 2,
+      "name": null,
+      "count": null,
+      "logo": null,
+      "desc": null,
+      "status": 1,
+      "createdAt": "2020-01-31T11:30:28.000Z",
+      "updatedAt": "2020-01-31T11:30:28.000Z"
+  },
+  {
+      "id": 3,
+      "name": "测试",
+      "count": "?",
+      "logo": "/singer/zhoujielun.jpeg",
+      "desc": "周杰伦的歌",
+      "status": 0,
+      "createdAt": "2020-01-31T11:30:55.000Z",
+      "updatedAt": "2020-01-31T11:30:55.000Z"
+  },
+  {
+      "id": 4,
+      "name": "列表",
+      "count": "23",
+      "logo": "/singer/dengziqi.jpeg",
+      "desc": "邓紫棋的歌",
+      "status": 0,
+      "createdAt": "2020-01-31T12:32:47.000Z",
+      "updatedAt": "2020-01-31T12:32:47.000Z"
+  },
+  {
+      "id": 5,
+      "name": "默认列表",
+      "count": 4,
+      "logo": "/singer/default.jpg",
+      "desc": "测试数据",
+      "status": 0,
+      "createdAt": "2020-01-29T00:00:00.000Z",
+      "updatedAt": "2020-01-29T00:00:00.000Z"
+  },
+  {
+      "id": 6,
+      "name": null,
+      "count": null,
+      "logo": null,
+      "desc": null,
+      "status": 1,
+      "createdAt": "2020-01-31T11:30:28.000Z",
+      "updatedAt": "2020-01-31T11:30:28.000Z"
+  },
+  {
+      "id": 7,
+      "name": "dd",
+      "count": 5,
+      "logo": "/singer/zhoujielun.jpeg",
+      "desc": "周杰伦的歌",
+      "status": 0,
+      "createdAt": "2020-01-31T11:30:55.000Z",
+      "updatedAt": "2020-01-31T11:30:55.000Z"
+  }
+]
