@@ -1,11 +1,20 @@
 <template>
   <div id="app">
     <router-view/>
+    <control-bar></control-bar>
   </div>
 </template>
 
+<script>
+import ControlBar from './components/ControlBar'
+export default {
+  components: {
+    ControlBar
+  }
+}
+</script>
+
 <style lang="scss">
-// @import url('https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css');
 @import url('./assets/font-awesome-4.7.0/css/font-awesome.min.css');
 
 * {
@@ -37,11 +46,13 @@ body {
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
 }
+// control-bar高60px 因此app底部留出60px;
+// control-bar绝对定位在底部
 #app {
+  box-sizing: border-box;
   height: 100%;
+  padding-bottom: 60px;
   overflow: hidden;
-//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-//     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

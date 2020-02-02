@@ -1,5 +1,5 @@
 <template>
-  <div class="player">
+  <div class="control-bar">
     <div class="progress" id="progress" @click="changeProcess">
       <span class="vernier" :style="{left: vernierLeft+'px'}"></span>
     </div>
@@ -17,7 +17,7 @@
       <span class="next" @click="next">
         <i class="fa fa-play"></i>
       </span>
-      <span @click="showPlayList">
+      <span @click="toPlayList">
         <i class="fa fa-bars"></i>
       </span>
     </div>
@@ -34,7 +34,6 @@ export default {
   },
   data() {
     return {
-      isPlay: false,
       player: null,
       currentTime: 0,
       duration: 0,
@@ -42,7 +41,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['playType', 'playList', 'musicSelectedIndex']),
+    ...mapState(['isPlay', 'playType', 'playList', 'musicSelectedIndex']),
     musicSelected() {
       return this.playList[this.musicSelectedIndex] || null
     },
@@ -66,8 +65,8 @@ export default {
     ...mapMutations(['nextMusic']),
     play() {
       if (!this.musicSelected) return
-      this.isPlay = !this.isPlay
-      if (this.isPlay) {
+      this.$store.state.isPlay = !this.$store.state.isPlay
+      if (this.$store.state.isPlay) {
         this.player.play()
       } else {
         this.player.pause()
@@ -81,8 +80,15 @@ export default {
       }
       this.nextMusic();
     },
-    showPlayList() {
-      this.$emit('showPlayList')
+    toPlayList() {
+      let path = '/playlist'
+      if (this.$route.path === path) {
+        this.$router.go(-1)
+      } else {
+        this.$router.push({
+          path
+        })
+      }
     },
     changeProcess() {
       let rate = event.clientX / this.progressWidth
@@ -133,7 +139,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.player {
+.control-bar {
   position: absolute;
   z-index: 20;
   bottom: 0;

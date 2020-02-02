@@ -1,6 +1,6 @@
 <template>
   <div class="play-list">
-    <head-bar :title="'播放队列'" :left="''" :right="'times'" @right="$emit('close')"></head-bar>
+    <head-bar :title="'播放队列'" :left="''" :right="'times'" @right="$router.go(-1)"></head-bar>
     <div class="list-header" @click="switchHandle">
       <img :src="`/play-icon/${playType}.png`" alt="">
       <h2 class="switch">
@@ -67,13 +67,9 @@ export default {
 
 <style lang="scss" scoped>
 .play-list {
-  position: absolute;
-  z-index: 10;
-  bottom: 0;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding-bottom: 50px;
   overflow: auto;
   border: 1px solid #eee;
   background-color: #fff;

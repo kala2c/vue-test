@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    // isPlay: false,
+    isPlay: false,
     playType: 'random',
     musicSelectedIndex: 0,
     playList: [
@@ -47,10 +47,12 @@ export default new Vuex.Store({
         state.playList.push(music)
         if (play) {
           state.musicSelectedIndex = state.playList.length-1
+          state.isPlay = true
         }
       } else {
         if (play) {
           state.musicSelectedIndex = currentIndex
+          state.isPlay = true
         }
       }
     },
@@ -77,6 +79,9 @@ export default new Vuex.Store({
         return
       }
       state.playList.splice(currentIndex, 1)
+      if (currentIndex < state.musicSelectedIndex) {
+        state.musicSelectedIndex --
+      }
       if (state.musicSelectedIndex === currentIndex) {
         this.commit("nextMusic")
       }
