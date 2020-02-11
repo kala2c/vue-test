@@ -1,32 +1,43 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home'
-import About from '../views/About'
-import FormSimple from '../views/form/Simple'
+import Layout from '../layout/index'
+import Login from '../views/Login'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: Home
+    path: '/login',
+    name: 'login',
+    component: Login,
+    meta: {title: '登录'}
   },
   {
     path: '/about',
-    name: 'about',
-    component: About
+    component: () => import('../views/About.vue')
   },
   {
-    path: '/form/simple',
-    name: 'form-simple',
-    component: FormSimple
+    path: '/',
+    component: Layout,
+    children: [
+      { 
+        path: '/about',
+        component: () => import('../views/About.vue') 
+      }, {
+        path: '/dashboard/welcome',
+        component: () => import('../views/dashboard/Welcome.vue')
+      }, {
+        path: '/dashboard/console',
+        component: () => import('../views/dashboard/Console.vue')
+      }, { 
+        path: '/form/simple',
+        component: () => import('../views/form/Simple.vue') 
+      }, {
+        path: '/form/step',
+        component: () => import('../views/form/Step.vue')
+      }
+    ]
   },
-  // {
-  //   path: '/form/simple',
-  //   name: 'form-simple',
-  //   component: FormSimple
-  // },
 ]
 
 const router = new VueRouter({

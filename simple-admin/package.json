@@ -1,11 +1,11 @@
 {
-  "name": "demo",
+  "name": "admin-pro",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
     "serve": "npx ../node_modules/.bin/vue-cli-service serve ./main.js",
-    "build": "npx ../node_modules/.bin/vue-cli-service build --dest ../dist/demo ./main.js"
+    "build": "npx ../node_modules/.bin/vue-cli-service build --dest ../dist/admin-pro ./main.js"
   },
   "author": "",
   "license": "ISC"

@@ -5,9 +5,10 @@
         class="el-menu-vertical-demo menu"
         @open="handleOpen"
         @close="handleClose"
-        background-color="#545c64"
+        :collapse="isCollapse"
+        background-color="#393d49"
         text-color="#fff"
-        active-text-color="#ffd04b">
+        >
         <el-submenu 
           v-for="(submenu, index) in routes"
           :key="submenu.id"
@@ -35,6 +36,12 @@
 
 <script>
 export default {
+  props: {
+    isCollapse: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
       routes: [
@@ -69,7 +76,7 @@ export default {
               path: '/form/----'
             }
           ]
-        }
+        },
       ]
     }
   },
@@ -85,18 +92,30 @@ export default {
 </script>
 
 <style scoped>
+.el-menu {
+  border: none;
+  min-width: 200px;
+}
+.el-menu--collapse {
+  min-width: 0;
+}
 .side-bar {
   height: 100%;
+  overflow: auto;
 }
 .side-bar .menu {
-  height: 100%;
+  min-height: 100%;
 }
 .link {
+  display: block;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   color: inherit;
 }
 .menu-item {
   width: 100%;
+  background-color: rgba(0, 0, 0, .3);
 }
 </style>
 
