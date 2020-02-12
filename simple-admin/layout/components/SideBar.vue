@@ -1,7 +1,7 @@
 <template>
   <div class="side-bar">
     <el-menu
-      default-active="2"
+        :default-active="activeIndex"
         class="el-menu-vertical-demo menu"
         @open="handleOpen"
         @close="handleClose"
@@ -23,10 +23,9 @@
               class="menu-item"
               v-for="(menuitem, itemIndex) in submenu.link"
               :key="menuitem.id"
-              :index="`${index}-${itemIndex}`">
-              <router-link class="link" :to="menuitem.path">
-                {{ menuitem.name }}
-              </router-link>
+              :index="`${index}-${itemIndex}`"
+              @click="changeActive(`${index}-${itemIndex}`, menuitem.path)">
+              {{ menuitem.name }}
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
@@ -35,6 +34,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   props: {
     isCollapse: {
@@ -44,49 +44,29 @@ export default {
   },
   data() {
     return {
-      routes: [
-        {
-          id: 1,
-          title: '报表实例',
-          link: [
-            {
-              id: 1,
-              name: '概览',
-              path: '/'
-            },
-            {
-              id: 2,
-              name: '关于',
-              path: '/about'
-            }
-          ]
-        },
-        {
-          id: 2,
-          title: '表单实例',
-          link: [
-            {
-              id: 1,
-              name: '普通表单',
-              path: '/form/simple'
-            },
-            {
-              id: 2,
-              name: '高级表单',
-              path: '/form/----'
-            }
-          ]
-        },
-      ]
+      activeIndex: ''
     }
   },
+  computed: {
+    ...mapState(['routes'])
+  },
   methods: {
+    changeActive(activeIndex, path) {
+      this.activeIndex = activeIndex
+      localStorage.setItem('active-index', activeIndex)
+      if (this.$route.path != path) {
+        this.$router.push({ path })
+      }
+    },
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath)
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath)
     }
+  },
+  mounted() {
+    this.activeIndex = localStorage.getItem('active-index')
   }
 }
 </script>
@@ -99,6 +79,10 @@ export default {
 .el-menu--collapse {
   min-width: 0;
 }
+.menu-item {
+  width: 100%;
+  background-color: rgba(0, 0, 0, .3);
+}
 .side-bar {
   height: 100%;
   overflow: auto;
@@ -106,17 +90,13 @@ export default {
 .side-bar .menu {
   min-height: 100%;
 }
-.link {
+/* .link {
   display: block;
   width: 100%;
   height: 100%;
   text-decoration: none;
   color: inherit;
-}
-.menu-item {
-  width: 100%;
-  background-color: rgba(0, 0, 0, .3);
-}
+} */
 </style>
 
 

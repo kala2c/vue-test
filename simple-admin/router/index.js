@@ -12,20 +12,20 @@ const routes = [
     component: Login,
     meta: {title: '登录'}
   },
-  {
-    path: '/about',
-    component: () => import('../views/About.vue')
-  },
+  // {
+  //   path: '/about',
+  //   component: () => import('../views/About.vue')
+  // },
   {
     path: '/',
     component: Layout,
     children: [
       { 
-        path: '/about',
-        component: () => import('../views/About.vue') 
+        path: '/welcome/welcome',
+        component: () => import('../views/welcome/Welcome.vue') 
       }, {
-        path: '/dashboard/welcome',
-        component: () => import('../views/dashboard/Welcome.vue')
+        path: '/welcome/about',
+        component: () => import('../views/welcome/About.vue')
       }, {
         path: '/dashboard/console',
         component: () => import('../views/dashboard/Console.vue')

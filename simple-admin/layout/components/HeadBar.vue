@@ -1,17 +1,18 @@
 <template>
   <div class="head-bar">
     <el-menu
-      :default-active="activeIndex"
       class="nav-menu"
       mode="horizontal"
       @select="handleSelect"
       >
-      <el-menu-item index="1" @click="$emit('toggleSideBar')">
+      <div class="nav-menu-btn" @click="$emit('toggleSideBar')">
         <i :class="`el-icon-s-${ sideBarFold ? `fold` : `unfold`}`"></i>
-      </el-menu-item>
+      </div>
       <el-breadcrumb class="breadcrumb" separator="/">
-        <el-breadcrumb-item :to="{ path: '/dashboard' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+        <el-breadcrumb-item
+          v-for="(item, index) in linkList"
+          :key="index"
+        >{{item.name}}</el-breadcrumb-item>
       </el-breadcrumb>
       <div class="search">
           <el-input
@@ -20,20 +21,22 @@
             v-model="key">
           </el-input>
       </div>
-      <el-menu-item index="2">
-        <i class="el-icon-full-screen"></i>
-      </el-menu-item>
+      <div class="nav-menu-btn" @click="fullScreen()">
+        <i v-show="!isFullScreen" class="el-icon-full-screen"></i>
+        <i v-show="isFullScreen" class="el-icon-switch-button"></i>
+      </div>
       <el-submenu index="3">
         <template slot="title">admin</template>
-        <el-menu-item index="2-1">个人资料</el-menu-item>
-        <el-menu-item index="2-2">设置</el-menu-item>
-        <el-menu-item index="2-3">退出登录</el-menu-item>
+        <el-menu-item index="4-1">个人资料</el-menu-item>
+        <el-menu-item index="4-2">设置</el-menu-item>
+        <el-menu-item index="4-3">退出登录</el-menu-item>
       </el-submenu>
     </el-menu>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   props: {
     sideBarFold: {
@@ -44,13 +47,64 @@ export default {
   data() {
     return {
       key: '',
-      activeIndex: "1"
+      linkList: [
+        { name: '首页', path: '' }
+      ],
+      isFullScreen: false,
+    }
+  },
+  computed: {
+    ...mapState(['routes'])
+  },
+  watch: {
+    '$route'(val) {
+      this.changeLinkList(val.path)
     }
   },
   methods: {
     handleSelect(key, keyPath) {
-      console.log(key, keyPath)
+      // console.log(key, keyPath)
+    },
+    changeLinkList(path) {
+      this.routes.forEach(submenu => {
+        let title = submenu.title
+        submenu.link.forEach(menuItem => {
+          if (menuItem.path === path) {
+            if (this.linkList.length > 2) {
+              this.linkList.pop()
+              this.linkList.pop()
+            }
+            this.linkList.push({ name: title, path: '' })
+            this.linkList.push({ name: menuItem.name, path: '' })
+          }
+        })
+      })
+    },
+    fullScreen() {
+      this.isFullScreen = !this.isFullScreen
+      if (this.isFullScreen) {
+        if(document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen();
+        } else if(document.documentElement.mozRequestFullScreen) {
+          document.documentElement.mozRequestFullScreen();
+        } else if(document.documentElement.webkitRequestFullscreen) {
+          document.documentElement.webkitRequestFullscreen();
+        } else if(document.documentElement.msRequestFullscreen) {
+          document.documentElement.msRequestFullscreen();
+        }
+      } else {
+        if(document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if(document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if(document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
+      }
     }
+  },
+  created() {
+    this.changeLinkList(this.$route.path)
   }
 }
 </script>
@@ -60,24 +114,26 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 50px;
   border-bottom: 1px solid #cbcbcb;
   .el-menu-item,
   .el-submenu {
-    height: 100%;
-    line-height: 50px;
     border: none!important;
+  }
+  .nav-menu-btn {
+    padding: 0 10px;
+    outline: none;
+    cursor: pointer;
   }
   .breadcrumb {
     display: flex;
     align-items: center;
     flex: 1;
     height: 100%;
-    padding-left: 20px;
+    padding-left: 15px;
     outline: none;
   }
   .search {
-    margin: 0 20px;
+    margin: 0 10px;
   }
 }
 </style>

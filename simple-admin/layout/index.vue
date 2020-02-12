@@ -32,6 +32,11 @@ export default {
     toggleSideBar() {
       this.sideBarFold = !this.sideBarFold
     }
+  },
+  created() {
+    if (localStorage.getItem('token') === null) {
+      this.$router.push({ path: '/login' })
+    }
   }
 }
 </script>
