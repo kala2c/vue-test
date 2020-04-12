@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
@@ -49,6 +50,11 @@ export default {
         this.$router.push({ path: '/' })
       }, 1200)
     }
+  },
+  mounted() {
+    axios.post('/api/login', this.formData).then(res => {
+      console.log(res)
+    })
   }
 }
 </script>

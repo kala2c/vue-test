@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <map3d class="map"></map3d>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '../components/HelloWorld.vue'
+import Map3d from '../components/Map3d.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Map3d
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.home {
+  box-sizing: border-box;
+  height: 100%;
+  // padding-top: 50px;
+  .map {
+    height: 100%;
+  }
+}
+</style>

@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
 
+import './mock/index'
+// if (process.env.NODE_ENV) {
+// }
+
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 
